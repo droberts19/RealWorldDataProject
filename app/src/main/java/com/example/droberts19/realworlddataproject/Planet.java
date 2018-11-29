@@ -1,4 +1,4 @@
 package com.example.droberts19.realworlddataproject;
 
-public class Uranus {
+public class Planet {
 }
