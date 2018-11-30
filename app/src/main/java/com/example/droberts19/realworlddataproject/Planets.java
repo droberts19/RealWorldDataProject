@@ -15,7 +15,7 @@ class Planets implements Model {
         current = 0;
         planets = new ArrayList();
 
-        // Read album data from text file.
+        // Read planet data from text file.
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open("AlbumData")));
             String nextLine;
@@ -24,7 +24,7 @@ class Planets implements Model {
             }
             bufferedReader.close();
         } catch (Exception e) {
-            System.out.println("Albums() reading data threw exception:");
+            System.out.println("Planets() reading data threw exception:");
             e.printStackTrace();
         }
     }
