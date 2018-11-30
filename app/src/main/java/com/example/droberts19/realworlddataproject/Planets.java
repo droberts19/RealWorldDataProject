@@ -28,4 +28,35 @@ class Planets implements Model {
             e.printStackTrace();
         }
     }
+
+    // Interface methods
+    public void next() {
+        // increment current to point to next pet
+        if (current < planets.size() - 1) {
+            current = current + 1;
+        } else {
+            current = 0;
+        }
+    }
+
+    public void previous() {
+        // increment current to point to previous pet
+        if (current > 0) {
+            current = current - 1;
+        } else {
+            current = planets.size() - 1;
+        }
+    }
+
+    public String countText() {
+        return "Top Selling Album #" + (current+1) + " of " + planets.size();
+    }
+
+    public String titleText() {
+        return planets.get(current).title();
+    }
+
+    public String descriptionText() {
+        return planets.get(current).description();
+    }
 }
