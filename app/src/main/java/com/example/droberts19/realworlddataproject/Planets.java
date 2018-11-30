@@ -17,7 +17,7 @@ class Planets implements Model {
 
         // Read planet data from text file.
         try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open("AlbumData")));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open("Data")));
             String nextLine;
             while ((nextLine = bufferedReader.readLine()) != null) {
                 planets.add(new Planet(nextLine));
@@ -49,7 +49,7 @@ class Planets implements Model {
     }
 
     public String countText() {
-        return "Top Selling Album #" + (current+1) + " of " + planets.size();
+        return "Planet" + (current+1) + " of " + planets.size();
     }
 
     public String titleText() {
