@@ -8,7 +8,6 @@ import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.ImageView;
-import java.io.File;
 
 
 public class Controller {
@@ -20,18 +19,16 @@ public class Controller {
     private TabItem earthTab;
 
 
-    Controller(ImageView PlanetPics, TabLayout Tabs, final Context c) {
+    Controller(ImageView PlanetPics, TabLayout Tabs, TabItem TI1, TabItem TI2, TabItem TI3, final Context c) {
         planets = PlanetPics;
         tabs = Tabs;
+        mercuryTab = TI1;
+        venusTab = TI2;
+        earthTab = TI3;
 
-        TabLayout tabs = new TabLayout(c);
-        tabs.addTab(tabs.newTab().setText("Mercury"));
-        mercuryTab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                planets.setImageResource(R.drawable.mercury);
-            }
-        });
+        //TabLayout tabs = new TabLayout(c);
+        //tabs.addTab(tabs.newTab().setText("Mercury"));
+        mercuryTab.setOn
         venusTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
