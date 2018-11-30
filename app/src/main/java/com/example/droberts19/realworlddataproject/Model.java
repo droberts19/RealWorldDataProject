@@ -1,4 +1,9 @@
 package com.example.droberts19.realworlddataproject;
 
-public class Model {
+public interface Model {
+    void previous();
+    void next();
+    String countText();
+    String titleText();
+    String descriptionText();
 }
