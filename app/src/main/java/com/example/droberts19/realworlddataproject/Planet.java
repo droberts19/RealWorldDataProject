@@ -2,13 +2,14 @@ package com.example.droberts19.realworlddataproject;
 
 import java.util.Scanner;
 
-public class Planet {
+class Planet {
     private String Planet;
     private int Mass;
     private int Diameter;
     private int Density;
     private int Gravity;
 
+    // Constructor
     Planet(String Data) {
         String[] parts = Data.split(" ", 8 );
         Planet = parts[0];
