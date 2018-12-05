@@ -1,5 +1,6 @@
 package com.example.droberts19.realworlddataproject;
 
-public class Planet {
+import java.util.Scanner;
 
+class Planet {
 }
