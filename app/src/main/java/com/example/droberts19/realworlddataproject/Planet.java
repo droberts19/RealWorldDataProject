@@ -3,24 +3,24 @@ package com.example.droberts19.realworlddataproject;
 import java.util.Scanner;
 
 class Planet {
-    private String Planet;
-    private int Mass;
-    private int Diameter;
-    private int Density;
-    private int Gravity;
+    public String title;
+    private String mass;
+    private String diameter;
+    private String denisty;
+    private String gravity;
 
-    // Constructor
-    Planet(String Data) {
-        String[] parts = Data.split(" ", 8 );
-        Planet = parts[0];
-        Mass = Integer.parseInt(parts[1]);
-        Diameter = Integer.parseInt(parts[2]);
-        Density = Integer.parseInt(parts[3]);
-        Gravity = Integer.parseInt(parts[4]);
+    Planet(String planetData) {
+        String[] info = planetData.split("\\t+", 8);
+        title = info[0];
+        mass = info[1];
+        diameter = info[2];
+        denisty = info[3];
+        gravity = info[4];
     }
-    String title() { return Planet; }
 
-    String description() {
-        return "Mass(10^24kg): " + Mass + "Diameter(kg): " + Diameter + "Density(kg/m^3): " + Density + "Gravity(m/s^2)" + Gravity;
+
+
+    String getData() {
+        return mass + diameter + denisty + gravity;
     }
 }
