@@ -9,6 +9,7 @@ class Planet {
     private int Density;
     private int Gravity;
 
+    // Constructor
     Planet(String Data) {
         String[] parts = Data.split(" ", 8 );
         Planet = parts[0];
