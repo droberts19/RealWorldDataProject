@@ -8,6 +8,7 @@ import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TabHost;
 
 
 public class Controller {
@@ -19,27 +20,60 @@ public class Controller {
     private TabItem earthTab;
 
 
-    Controller(ImageView PlanetPics, TabLayout Tabs, TabItem TI1, TabItem TI2, TabItem TI3, final Context c) {
+    Controller(ImageView PlanetPics, TabLayout Tabs, final Context c) {
         planets = PlanetPics;
         tabs = Tabs;
-        mercuryTab = TI1;
-        venusTab = TI2;
-        earthTab = TI3;
 
-        //TabLayout tabs = new TabLayout(c);
-        //tabs.addTab(tabs.newTab().setText("Mercury"));
-        mercuryTab.setOn
-        venusTab.setOnClickListener(new View.OnClickListener() {
+        tabs.addTab(tabs.newTab().setText("1"));
+        tabs.addTab(tabs.newTab().setText("2"));
+        tabs.addTab(tabs.newTab().setText("3"));
+        tabs.addTab(tabs.newTab().setText("4"));
+        tabs.addTab(tabs.newTab().setText("5"));
+        tabs.addTab(tabs.newTab().setText("6"));
+        tabs.addTab(tabs.newTab().setText("7"));
+        tabs.addTab(tabs.newTab().setText("8"));
+
+        planets.setImageResource(R.drawable.mercury);
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View v) {
-                planets.setImageResource(R.drawable.venus);
+            public void onTabSelected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                if (position == 0) {
+                    planets.setImageResource(R.drawable.mercury);
+                }
+                if (position == 1) {
+                    planets.setImageResource(R.drawable.venus);
+                }
+                if (position == 2) {
+                    planets.setImageResource(R.drawable.earth);
+                }
+                if (position == 3) {
+                    planets.setImageResource(R.drawable.mars);
+                }
+                if (position == 4) {
+                    planets.setImageResource(R.drawable.jupiter);
+                }
+                if (position == 5) {
+                    planets.setImageResource(R.drawable.saturn);
+                }
+                if (position == 6) {
+                    planets.setImageResource(R.drawable.uranus);
+                }
+                if (position == 7) {
+                    planets.setImageResource(R.drawable.neptune);
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                planets.clearAnimation();
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
-        earthTab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                planets.setImageResource(R.drawable.earth);
-            }
-        });
+
     }
 }

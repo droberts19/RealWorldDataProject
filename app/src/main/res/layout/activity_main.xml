@@ -93,53 +93,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <android.support.design.widget.TabItem
-            android:id="@+id/mercruyTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/venusTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/earthTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/marsTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/jupiterTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/saturnTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/uranusTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/neptuneTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8" />
     </android.support.design.widget.TabLayout>
 
 </android.support.constraint.ConstraintLayout>

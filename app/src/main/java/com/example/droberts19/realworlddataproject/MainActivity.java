@@ -16,11 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView iv = findViewById(R.id.imageViewer);
         TabLayout tb = findViewById(R.id.tabs);
-        TabItem ti1 = findViewById(R.id.mercruyTab);
-        TabItem ti2 = findViewById(R.id.venusTab);
-        TabItem ti3 = findViewById(R.id.earthTab);
 
-        control = new Controller(iv, tb, ti1, ti2, ti3, getApplicationContext());
+        control = new Controller(iv, tb, getApplicationContext());
     }
 
     @Override
