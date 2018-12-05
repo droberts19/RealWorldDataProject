@@ -6,7 +6,7 @@ class Planet {
     public String title;
     private String mass;
     private String diameter;
-    private String denisty;
+    private String density;
     private String gravity;
 
     Planet(String planetData) {
@@ -14,13 +14,13 @@ class Planet {
         title = info[0];
         mass = info[1];
         diameter = info[2];
-        denisty = info[3];
+        density = info[3];
         gravity = info[4];
     }
 
 
 
     String getData() {
-        return mass + diameter + denisty + gravity;
+        return mass + diameter + density + gravity;
     }
 }
