@@ -2,7 +2,7 @@ package com.example.droberts19.realworlddataproject;
 
 import java.util.Scanner;
 
-public class Planet {
+class Planet {
     private String Planet;
     private int Mass;
     private int Diameter;
