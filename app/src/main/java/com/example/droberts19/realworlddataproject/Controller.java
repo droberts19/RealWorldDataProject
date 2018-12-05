@@ -9,20 +9,30 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class Controller {
 
     private ImageView planets;
     private TabLayout tabs;
-    private TabItem mercuryTab;
-    private TabItem venusTab;
-    private TabItem earthTab;
+    private TextView massText;
+    private TextView diameterText;
+    private TextView densityText;
+    private TextView gravityText;
+    private TextView titleText;
 
-
-    Controller(ImageView PlanetPics, TabLayout Tabs, final Context c) {
+    Controller(ImageView PlanetPics, TabLayout Tabs, TextView TV1, TextView TV2,
+               TextView TV3, TextView TV4, TextView TV5, final Context c) {
         planets = PlanetPics;
         tabs = Tabs;
+        massText = TV1;
+        diameterText = TV2;
+        densityText = TV3;
+        gravityText = TV4;
+        titleText = TV5;
 
         tabs.addTab(tabs.newTab().setText("1"));
         tabs.addTab(tabs.newTab().setText("2"));
