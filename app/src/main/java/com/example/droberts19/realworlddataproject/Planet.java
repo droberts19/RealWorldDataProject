@@ -9,8 +9,8 @@ class Planet {
     private String density;
     private String gravity;
 
-    Planet(String planetData) {
-        String[] info = planetData.split("\\t+", 8);
+    Planet(String planetsData) {
+        String[] info = planetsData.split("\\t+", 8);
         title = info[0];
         mass = info[1];
         diameter = info[2];
@@ -18,9 +18,23 @@ class Planet {
         gravity = info[4];
     }
 
+    String getTitle() {
+        return title;
+    }
 
+    String getMass() {
+        return mass;
+    }
 
-    String getData() {
-        return mass + diameter + density + gravity;
+    String getDiameter() {
+        return diameter;
+    }
+
+    String getDensity() {
+        return density;
+    }
+
+    String getGravity() {
+        return gravity;
     }
 }

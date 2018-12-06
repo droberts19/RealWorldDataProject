@@ -10,12 +10,11 @@ class Planets implements Model {
     private ArrayList<Planet> planets;
     private int current;
 
-    // Constructor
     Planets (Context context) {
         current = 0;
         planets = new ArrayList();
 
-        // Read planet data from text file.
+
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open("Data")));
             String nextLine;
@@ -27,5 +26,25 @@ class Planets implements Model {
             System.out.println("Planets() reading data threw exception:");
             e.printStackTrace();
         }
+    }
+
+    public String titleTexts() {
+        return planets.get(current).getTitle();
+    }
+
+    public String massTexts() {
+        return planets.get(current).getMass();
+    }
+
+    public String diameterTexts() {
+        return planets.get(current).getDiameter();
+    }
+
+    public String densityTexts() {
+        return planets.get(current).getDensity();
+    }
+
+    public String gravityTexts() {
+        return planets.get(current).getGravity();
     }
 }

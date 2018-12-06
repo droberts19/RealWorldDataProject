@@ -1,18 +1,9 @@
 package com.example.droberts19.realworlddataproject;
 
-import android.app.ActionBar;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.TabHost;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 
 public class Controller {
 
@@ -23,6 +14,8 @@ public class Controller {
     private TextView densityText;
     private TextView gravityText;
     private TextView titleText;
+
+    private Model planetsData;
 
     Controller(ImageView PlanetPics, TabLayout Tabs, TextView TV1, TextView TV2,
                TextView TV3, TextView TV4, TextView TV5, final Context c) {
@@ -49,34 +42,50 @@ public class Controller {
             public void onTabSelected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
                 if (position == 0) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.mercury);
+                    updateText();
                 }
                 if (position == 1) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.venus);
+                    updateText();
                 }
                 if (position == 2) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.earth);
+                    updateText();
                 }
                 if (position == 3) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.mars);
+                    updateText();
                 }
                 if (position == 4) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.jupiter);
+                    updateText();
                 }
                 if (position == 5) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.saturn);
+                    updateText();
                 }
                 if (position == 6) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.uranus);
+                    updateText();
                 }
                 if (position == 7) {
+                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.neptune);
+                    updateText();
                 }
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                planets.clearAnimation();
+
             }
 
             @Override
@@ -84,6 +93,13 @@ public class Controller {
 
             }
         });
+    }
 
+    private void updateText() {
+        titleText.setText(planetsData.titleTexts());
+        massText.setText(planetsData.massTexts());
+        diameterText.setText(planetsData.diameterTexts());
+        densityText.setText(planetsData.densityTexts());
+        gravityText.setText(planetsData.gravityTexts());
     }
 }
