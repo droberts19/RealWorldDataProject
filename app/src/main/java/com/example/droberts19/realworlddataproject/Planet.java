@@ -17,22 +17,22 @@ class Planet {
     }
 
     String getTitle() {
-        return title;
+        return "Planet: " + title;
     }
 
     String getMass() {
-        return mass;
+        return "Mass" + mass;
     }
 
     String getDiameter() {
-        return diameter;
+        return "Diameter" + diameter;
     }
 
     String getDensity() {
-        return density;
+        return "Density" + density;
     }
 
     String getGravity() {
-        return gravity;
+        return "Gravity" + gravity;
     }
 }
