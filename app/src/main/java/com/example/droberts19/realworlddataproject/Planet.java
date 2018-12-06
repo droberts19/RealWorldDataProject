@@ -1,7 +1,5 @@
 package com.example.droberts19.realworlddataproject;
 
-import java.util.Scanner;
-
 class Planet {
     public String title;
     private String mass;
@@ -10,7 +8,7 @@ class Planet {
     private String gravity;
 
     Planet(String planetsData) {
-        String[] info = planetsData.split("\\t+", 8);
+        String[] info = planetsData.split("\\t+", 6);
         title = info[0];
         mass = info[1];
         diameter = info[2];
