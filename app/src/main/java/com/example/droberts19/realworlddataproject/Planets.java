@@ -14,7 +14,6 @@ class Planets implements Model {
         current = 0;
         planets = new ArrayList();
 
-
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open("Data")));
             String nextLine;
@@ -37,7 +36,6 @@ class Planets implements Model {
     }
 
     public void previous() {
-        // increment current to point to previous pet
         if (current > 0) {
             current = current - 1;
         } else {

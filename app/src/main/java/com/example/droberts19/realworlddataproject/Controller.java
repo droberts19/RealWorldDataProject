@@ -91,10 +91,10 @@ public class Controller {
     }
 
     private void updateText() {
-        titleText.setText("Planets: " + planetsData.titleTexts());
-        massText.setText("Mass: " + planetsData.massTexts());
-        diameterText.setText("Diameter: " + planetsData.diameterTexts());
-        densityText.setText("Density: " + planetsData.densityTexts());
-        gravityText.setText("Gravity: " + planetsData.gravityTexts());
+        titleText.setText(planetsData.titleTexts());
+        massText.setText(planetsData.massTexts());
+        diameterText.setText(planetsData.diameterTexts());
+        densityText.setText(planetsData.densityTexts());
+        gravityText.setText(planetsData.gravityTexts());
     }
 }
