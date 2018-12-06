@@ -37,47 +37,42 @@ public class Controller {
         tabs.addTab(tabs.newTab().setText("8"));
 
         planets.setImageResource(R.drawable.mercury);
+
+        planetsData = new Planets(c);
+
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
                 if (position == 0) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.mercury);
                     updateText();
                 }
                 if (position == 1) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.venus);
                     updateText();
                 }
                 if (position == 2) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.earth);
                     updateText();
                 }
                 if (position == 3) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.mars);
                     updateText();
                 }
                 if (position == 4) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.jupiter);
                     updateText();
                 }
                 if (position == 5) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.saturn);
                     updateText();
                 }
                 if (position == 6) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.uranus);
                     updateText();
                 }
                 if (position == 7) {
-                    planets.clearAnimation();
                     planets.setImageResource(R.drawable.neptune);
                     updateText();
                 }
@@ -85,7 +80,7 @@ public class Controller {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                planets.clearAnimation();
             }
 
             @Override
@@ -96,10 +91,10 @@ public class Controller {
     }
 
     private void updateText() {
-        titleText.setText(planetsData.titleTexts());
-        massText.setText(planetsData.massTexts());
-        diameterText.setText(planetsData.diameterTexts());
-        densityText.setText(planetsData.densityTexts());
-        gravityText.setText(planetsData.gravityTexts());
+        titleText.setText("Planets: " + planetsData.titleTexts());
+        massText.setText("Mass: " + planetsData.massTexts());
+        diameterText.setText("Diameter: " + planetsData.diameterTexts());
+        densityText.setText("Density: " + planetsData.densityTexts());
+        gravityText.setText("Gravity: " + planetsData.gravityTexts());
     }
 }

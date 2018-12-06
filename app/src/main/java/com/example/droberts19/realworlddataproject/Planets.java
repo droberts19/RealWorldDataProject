@@ -28,6 +28,23 @@ class Planets implements Model {
         }
     }
 
+    public void next() {
+        if (current < planets.size() - 1) {
+            current = current + 1;
+        } else {
+            current = 0;
+        }
+    }
+
+    public void previous() {
+        // increment current to point to previous pet
+        if (current > 0) {
+            current = current - 1;
+        } else {
+            current = planets.size() - 1;
+        }
+    }
+
     public String titleTexts() {
         return planets.get(current).getTitle();
     }
