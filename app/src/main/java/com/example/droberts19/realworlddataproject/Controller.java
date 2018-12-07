@@ -39,6 +39,7 @@ public class Controller {
         planets.setImageResource(R.drawable.mercury);
 
         planetsData = new Planets(c);
+        updateText();
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -46,34 +47,42 @@ public class Controller {
                 int position = tab.getPosition();
                 if (position == 0) {
                     planets.setImageResource(R.drawable.mercury);
+                    setMercury1();
                     updateText();
                 }
                 if (position == 1) {
                     planets.setImageResource(R.drawable.venus);
+                    setVenus1();
                     updateText();
                 }
                 if (position == 2) {
                     planets.setImageResource(R.drawable.earth);
+                    setEarth1();
                     updateText();
                 }
                 if (position == 3) {
                     planets.setImageResource(R.drawable.mars);
+                    setMars1();
                     updateText();
                 }
                 if (position == 4) {
                     planets.setImageResource(R.drawable.jupiter);
+                    setJupiter1();
                     updateText();
                 }
                 if (position == 5) {
                     planets.setImageResource(R.drawable.saturn);
+                    setSaturn1();
                     updateText();
                 }
                 if (position == 6) {
                     planets.setImageResource(R.drawable.uranus);
+                    setUranus1();
                     updateText();
                 }
                 if (position == 7) {
                     planets.setImageResource(R.drawable.neptune);
+                    setNeptune1();
                     updateText();
                 }
             }
@@ -96,5 +105,37 @@ public class Controller {
         diameterText.setText(planetsData.diameterTexts());
         densityText.setText(planetsData.densityTexts());
         gravityText.setText(planetsData.gravityTexts());
+    }
+
+    private void setMercury1() {
+        planetsData.setMercury();
+    }
+
+    private void setVenus1() {
+        planetsData.setVenus();
+    }
+
+    private void setEarth1() {
+        planetsData.setEarth();
+    }
+
+    private void setMars1() {
+        planetsData.setMars();
+    }
+
+    private void setJupiter1() {
+        planetsData.setJupiter();
+    }
+
+    private void setSaturn1() {
+        planetsData.setSaturn();
+    }
+
+    private void setUranus1() {
+        planetsData.setUranus();
+    }
+
+    private void setNeptune1() {
+        planetsData.setNeptune();
     }
 }

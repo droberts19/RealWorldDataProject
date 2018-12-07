@@ -1,14 +1,14 @@
 package com.example.droberts19.realworlddataproject;
 
 class Planet {
-    public String title;
+    private String title;
     private String mass;
     private String diameter;
     private String density;
     private String gravity;
 
-    Planet(String planetsData) {
-        String[] info = planetsData.split("\\t+", 6);
+    Planet(String planetData) {
+        String[] info = planetData.split("\\t+", 6);
         title = info[0];
         mass = info[1];
         diameter = info[2];
@@ -21,18 +21,18 @@ class Planet {
     }
 
     String getMass() {
-        return "Mass" + mass;
+        return "Mass: " + mass + " 10^(24) kg";
     }
 
     String getDiameter() {
-        return "Diameter" + diameter;
+        return "Diameter: " + diameter + " km";
     }
 
     String getDensity() {
-        return "Density" + density;
+        return "Density: " + density + " kg/m^(3)";
     }
 
     String getGravity() {
-        return "Gravity" + gravity;
+        return "Gravity: " + gravity + " m/s^(2)";
     }
 }
