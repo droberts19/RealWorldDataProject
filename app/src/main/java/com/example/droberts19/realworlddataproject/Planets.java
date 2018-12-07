@@ -27,36 +27,20 @@ class Planets implements Model {
         }
     }
 
-    public void setMercury() {
-        current = 0;
+    public void next() {
+        if (current < planets.size() - 1) {
+            current = current + 1;
+        } else {
+            current = 0;
+        }
     }
 
-    public void setVenus() {
-        current = 1;
-    }
-
-    public void setEarth() {
-        current = 2;
-    }
-
-    public void setMars() {
-        current = 3;
-    }
-
-    public void setJupiter() {
-        current = 4;
-    }
-
-    public void setSaturn() {
-        current = 5;
-    }
-
-    public void setUranus() {
-        current = 6;
-    }
-
-    public void setNeptune() {
-        current = 7;
+    public void previous() {
+        if (current > 0) {
+            current = current - 1;
+        } else {
+            current = planets.size() - 1;
+        }
     }
 
     public String titleTexts() {
