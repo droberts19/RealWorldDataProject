@@ -13,6 +13,5 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         ImageView iv2 = findViewById(R.id.imageViewer2);
-        Button
     }
 }

@@ -10,9 +10,9 @@
     <ImageView
         android:id="@+id/imageViewer2"
         android:layout_width="match_parent"
-        android:layout_height="591dp"
+        android:layout_height="654dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/map" />
+        app:srcCompat="@drawable/solarSystem" />
 
     <LinearLayout
         android:layout_width="match_parent"
