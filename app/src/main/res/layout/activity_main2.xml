@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="654dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/solarSystem" />
+        app:srcCompat="@drawable/solar_system" />
 
     <LinearLayout
         android:layout_width="match_parent"
