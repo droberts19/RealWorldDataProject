@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Controller control;
+    private Controller control;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
