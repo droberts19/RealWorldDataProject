@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv4 = findViewById(R.id.gravityText);
         TextView tv5 = findViewById(R.id.titleText);
 
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(Controller.PLANETS);
+
 
 
         control = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, getApplicationContext(), message);
