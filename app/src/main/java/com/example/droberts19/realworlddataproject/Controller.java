@@ -18,6 +18,10 @@ public class Controller {
     private TextView densityText;
     private TextView gravityText;
     private TextView titleText;
+    private Button backButton;
+    private Model planetsData;
+
+    private ImageView solarSystem;
     private Button earth1;
     private Button jupiter1;
     private Button mars1;
@@ -27,14 +31,79 @@ public class Controller {
     private Button uranus1;
     private Button venus1;
     private MainActivity2 activity;
+    private int a = 0;
 
+    Controller(ImageView SS, Button e, Button j, Button m1, Button m2, Button n, Button s, Button u, Button v, MainActivity2 ma2) {
+        solarSystem = SS;
+        earth1 = e;
+        jupiter1 = j;
+        mars1 = m1;
+        mercury1 = m2;
+        neptune1 = n;
+        saturn1 = s;
+        uranus1 = u;
+        venus1 = v;
+        activity = ma2;
 
+        mercury1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 1;
+            }
+        });
 
+        venus1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 2;
+            }
+        });
 
-    private Model planetsData;
+        earth1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 3;
+            }
+        });
+
+        mars1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 4;
+            }
+        });
+
+        jupiter1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 5;
+            }
+        });
+
+        saturn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 6;
+            }
+        });
+
+        uranus1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 7;
+            }
+        });
+
+        neptune1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a = 8;
+            }
+        });
+    }
 
     Controller(ImageView PlanetPics, TabLayout Tabs, TextView TV1, TextView TV2,
-               TextView TV3, TextView TV4, TextView TV5, final Context c) {
+               TextView TV3, TextView TV4, TextView TV5, Button B1, final Context c, int inta) {
         planets = PlanetPics;
         tabs = Tabs;
         massText = TV1;
@@ -42,6 +111,7 @@ public class Controller {
         densityText = TV3;
         gravityText = TV4;
         titleText = TV5;
+        backButton = B1;
 
         tabs.addTab(tabs.newTab().setText("1"));
         tabs.addTab(tabs.newTab().setText("2"));
@@ -106,6 +176,7 @@ public class Controller {
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                 planets.clearAnimation();
+                planets.setImageResource(0);
             }
 
             @Override
@@ -113,30 +184,18 @@ public class Controller {
 
             }
         });
-    }
 
-    Controller(Button e, Button j, Button m1, Button m2, Button n, Button s, Button u, Button v, MainActivity2 mca) {
-        earth1 = e;
-        jupiter1 = j;
-        mars1 = m1;
-        mercury1 = m2;
-        neptune1 = n;
-        saturn1 = s;
-        uranus1 = u;
-        venus1 = v;
-        activity = mca;
-
-        earth1.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                a = 0;
             }
         });
     }
 
     private void pressedPlanet(String PLANETS) {
         Intent intent = new Intent(activity, MainActivity.class);
-        intent.putExtra(PLANETS, planets);
+        intent
         activity.startActivity(intent);
     }
 

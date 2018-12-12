@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private Controller control;
+    private Controller controller2;
+    private int a = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
         TextView tv3 = findViewById(R.id.densityText);
         TextView tv4 = findViewById(R.id.gravityText);
         TextView tv5 = findViewById(R.id.titleText);
+        Button b1 = findViewById(R.id.backButton);
 
+        Intent intent = getIntent();
+        int inta = intent.getIntExtra(Controller.PLANETS, a);
 
-
-
-        control = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, getApplicationContext(), message);
+        controller2 = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, b1, getApplicationContext(), inta);
     }
 }
