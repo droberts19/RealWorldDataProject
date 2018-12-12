@@ -21,14 +21,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/mercury"
+            android:id="@+id/mercury1"
             android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mercury" />
 
         <Button
-            android:id="@+id/jupiter"
+            android:id="@+id/jupiter1"
             android:layout_width="118dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,14 +42,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/venus"
+            android:id="@+id/venus1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Venus" />
 
         <Button
-            android:id="@+id/saturn"
+            android:id="@+id/saturn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,14 +63,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/earth"
+            android:id="@+id/earth1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Earth" />
 
         <Button
-            android:id="@+id/uranus"
+            android:id="@+id/uranus1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,14 +84,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/mars"
+            android:id="@+id/mars1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mars" />
 
         <Button
-            android:id="@+id/neptune"
+            android:id="@+id/neptune1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

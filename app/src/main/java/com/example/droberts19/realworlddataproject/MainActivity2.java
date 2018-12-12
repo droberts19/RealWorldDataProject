@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity2 extends AppCompatActivity {
+    private Controller controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,5 +14,15 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         ImageView iv2 = findViewById(R.id.imageViewer2);
+        Button earth1 = findViewById(R.id.earth1);
+        Button jupiter1 = findViewById(R.id.jupiter1);
+        Button mars1 = findViewById(R.id.mars1);
+        Button mercury1 = findViewById(R.id.mercury1);
+        Button neptune1 = findViewById(R.id.neptune1);
+        Button saturn1 = findViewById(R.id.saturn1);
+        Button uranus1 = findViewById(R.id.uranus1);
+        Button venus1 = findViewById(R.id.venus1);
+
+        controller = new Controller(iv2, earth1, jupiter1, mars1, mercury1, neptune1, saturn1, uranus1, venus1);
     }
 }

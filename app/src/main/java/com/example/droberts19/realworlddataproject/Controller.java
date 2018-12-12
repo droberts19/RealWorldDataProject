@@ -2,6 +2,8 @@ package com.example.droberts19.realworlddataproject;
 
 import android.content.Context;
 import android.support.design.widget.TabLayout;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +16,18 @@ public class Controller {
     private TextView densityText;
     private TextView gravityText;
     private TextView titleText;
+    private Button earth1;
+    private Button jupiter1;
+    private Button mars1;
+    private Button mercury1;
+    private Button neptune1;
+    private Button saturn1;
+    private Button uranus1;
+    private Button venus1;
+    private MainActivity2 activity;
+
+
+
 
     private Model planetsData;
 
@@ -94,6 +108,25 @@ public class Controller {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+    }
+
+    Controller(Button e, Button j, Button m1, Button m2, Button n, Button s, Button u, Button v, MainActivity2 mca) {
+        earth1 = e;
+        jupiter1 = j;
+        mars1 = m1;
+        mercury1 = m2;
+        neptune1 = n;
+        saturn1 = s;
+        uranus1 = u;
+        venus1 = v;
+        activity = mca;
+
+        earth1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
