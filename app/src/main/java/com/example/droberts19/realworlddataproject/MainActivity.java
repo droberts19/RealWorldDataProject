@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button b1 = findViewById(R.id.backButton);
 
         Intent intent = getIntent();
-        int inta = intent.getIntExtra(Controller.PLANETS, a);
+        int inta = intent.getIntExtra(Controller.PLANETS_TYPE, a);
 
         controller2 = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, b1, getApplicationContext(), inta);
     }
