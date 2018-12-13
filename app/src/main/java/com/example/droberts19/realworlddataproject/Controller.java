@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Controller {
 
-    public static final String PLANETS = "com.example.droberts19.realworlddataproject.Planets";
+    public static final String PLANETS_TYPE = "com.example.droberts19.realworlddataproject.Planets";
 
     private ImageView planets;
     private TabLayout tabs;
@@ -196,7 +196,7 @@ public class Controller {
 
     private void pressedPlanet(String PLANETS) {
         Intent intent = new Intent(activity, MainActivity.class);
-        intent
+        intent.putExtra(PLANETS_TYPE, PLANETS);
         activity.startActivity(intent);
     }
 
