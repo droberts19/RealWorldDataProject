@@ -24,11 +24,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv3 = findViewById(R.id.densityText);
         TextView tv4 = findViewById(R.id.gravityText);
         TextView tv5 = findViewById(R.id.titleText);
-        Button b1 = findViewById(R.id.backButton);
 
-        Intent intent = getIntent();
-        int inta = intent.getIntExtra(Controller.PLANETS, a);
-
-        controller2 = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, b1, getApplicationContext(), inta);
+        controller2 = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, getApplicationContext());
     }
 }
