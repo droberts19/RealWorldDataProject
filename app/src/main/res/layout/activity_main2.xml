@@ -24,7 +24,11 @@
             android:id="@+id/mercury1"
             android:layout_width="123dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/darker_gray"
             android:text="Mercury" />
 
         <Button
@@ -32,6 +36,7 @@
             android:layout_width="118dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_orange_light"
             android:text="Jupiter" />
     </LinearLayout>
 
@@ -46,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
             android:text="Venus" />
 
         <Button
@@ -53,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_orange_dark"
             android:text="Saturn" />
     </LinearLayout>
 
@@ -67,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Earth" />
 
         <Button
@@ -74,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
             android:text="Uranus" />
     </LinearLayout>
 
@@ -88,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_dark"
             android:text="Mars" />
 
         <Button
@@ -95,6 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_primary_dark"
             android:text="Neptune" />
     </LinearLayout>
 
