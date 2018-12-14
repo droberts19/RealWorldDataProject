@@ -29,8 +29,9 @@ public class Controller {
     private Button uranus1;
     private Button venus1;
     private MainActivity2 activity;
+    private int a = 0;
 
-    Controller(final ImageView SS, Button e, Button j, Button m1, Button m2, Button n, Button s, Button u, Button v, MainActivity2 ma2) {
+    Controller(final ImageView SS, Button e, Button j, Button m1, Button m2, Button n, Button s, final Button u, Button v, MainActivity2 ma2) {
         solarSystem = SS;
         earth1 = e;
         jupiter1 = j;
@@ -46,6 +47,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 1;
             }
         });
 
@@ -53,6 +55,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 2;
             }
         });
 
@@ -60,6 +63,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 3;
             }
         });
 
@@ -67,6 +71,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 4;
             }
         });
 
@@ -74,6 +79,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 5;
             }
         });
 
@@ -81,6 +87,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 6;
             }
         });
 
@@ -88,6 +95,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 7;
             }
         });
 
@@ -95,6 +103,7 @@ public class Controller {
             @Override
             public void onClick(View v) {
                 Switchto();
+                a = 8;
             }
         });
     }
@@ -123,7 +132,7 @@ public class Controller {
         planetsData = new Planets(c);
         updateText();
 
-        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        /*tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
@@ -179,12 +188,55 @@ public class Controller {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
-        });
+        });*/
     }
 
     private void Switchto() {
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
+    }
+
+    private void updateStuff() {
+        if (a == 1) {
+            planets.setImageResource(R.drawable.mercury);
+            setMercury1();
+            updateText();
+        }
+        if (a == 2){
+            planets.setImageResource(R.drawable.venus);
+            setVenus1();
+            updateText();
+        }
+        if (a == 3){
+            planets.setImageResource(R.drawable.earth);
+            setEarth1();
+            updateText();
+        }
+        if (a == 4) {
+            planets.setImageResource(R.drawable.mars);
+            setMars1();
+            updateText();
+        }
+        if (a == 5) {
+            planets.setImageResource(R.drawable.jupiter);
+            setJupiter1();
+            updateText();
+        }
+        if (a == 6) {
+            planets.setImageResource(R.drawable.saturn);
+            setSaturn1();
+            updateText();
+        }
+        if (a == 7) {
+            planets.setImageResource(R.drawable.uranus);
+            setUranus1();
+            updateText();
+        }
+        if (a == 8) {
+            planets.setImageResource(R.drawable.neptune);
+            setNeptune1();
+            updateText();
+        }
     }
 
     private void updateText() {
