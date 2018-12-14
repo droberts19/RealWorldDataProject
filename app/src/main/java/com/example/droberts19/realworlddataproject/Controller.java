@@ -29,7 +29,6 @@ public class Controller {
     private Button uranus1;
     private Button venus1;
     private MainActivity2 activity;
-    private int a = 0;
 
     Controller(final ImageView SS, Button e, Button j, Button m1, Button m2, Button n, Button s, final Button u, Button v, MainActivity2 ma2) {
         solarSystem = SS;
@@ -46,7 +45,6 @@ public class Controller {
         mercury1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 1;
                 Switchto("m1");
             }
         });
@@ -54,7 +52,6 @@ public class Controller {
         venus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 2;
                 Switchto("v");
             }
         });
@@ -62,7 +59,6 @@ public class Controller {
         earth1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 3;
                 Switchto("e");
             }
         });
@@ -70,7 +66,6 @@ public class Controller {
         mars1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 4;
                 Switchto("m2");
             }
         });
@@ -78,7 +73,6 @@ public class Controller {
         jupiter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 5;
                 Switchto("j");
             }
         });
@@ -86,7 +80,6 @@ public class Controller {
         saturn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 6;
                 Switchto("s");
             }
         });
@@ -94,7 +87,6 @@ public class Controller {
         uranus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 7;
                 Switchto("u");
             }
         });
@@ -102,7 +94,6 @@ public class Controller {
         neptune1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a = 8;
                 Switchto("n");
             }
         });
@@ -119,64 +110,6 @@ public class Controller {
 
         planetsData = new Planets(c);
         updateText();
-
-        /*tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                int position = tab.getPosition();
-                if (position == 0) {
-                    planets.setImageResource(R.drawable.mercury);
-                    setMercury1();
-                    updateText();
-                }
-                if (position == 1) {
-                    planets.setImageResource(R.drawable.venus);
-                    setVenus1();
-                    updateText();
-                }
-                if (position == 2) {
-                    planets.setImageResource(R.drawable.earth);
-                    setEarth1();
-                    updateText();
-                }
-                if (position == 3) {
-                    planets.setImageResource(R.drawable.mars);
-                    setMars1();
-                    updateText();
-                }
-                if (position == 4) {
-                    planets.setImageResource(R.drawable.jupiter);
-                    setJupiter1();
-                    updateText();
-                }
-                if (position == 5) {
-                    planets.setImageResource(R.drawable.saturn);
-                    setSaturn1();
-                    updateText();
-                }
-                if (position == 6) {
-                    planets.setImageResource(R.drawable.uranus);
-                    setUranus1();
-                    updateText();
-                }
-                if (position == 7) {
-                    planets.setImageResource(R.drawable.neptune);
-                    setNeptune1();
-                    updateText();
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                planets.clearAnimation();
-                planets.setImageResource(0);
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });*/
 
         if (msg.equals("m1")) {
             planets.setImageResource(R.drawable.mercury);
@@ -224,33 +157,6 @@ public class Controller {
         Intent intent = new Intent(activity, MainActivity.class);
         intent.putExtra(no, planet);
         activity.startActivity(intent);
-    }
-
-    private void updateStuff() {
-        if (a == 1) {
-
-        }
-        if (a == 2){
-
-        }
-        if (a == 3){
-
-        }
-        if (a == 4) {
-
-        }
-        if (a == 5) {
-
-        }
-        if (a == 6) {
-
-        }
-        if (a == 7) {
-
-        }
-        if (a == 8) {
-
-        }
     }
 
     private void updateText() {
