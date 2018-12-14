@@ -18,13 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView iv = findViewById(R.id.imageViewer);
-        TabLayout tb = findViewById(R.id.tabs);
         TextView tv1 = findViewById(R.id.massText);
         TextView tv2 = findViewById(R.id.diameterText);
         TextView tv3 = findViewById(R.id.densityText);
         TextView tv4 = findViewById(R.id.gravityText);
         TextView tv5 = findViewById(R.id.titleText);
 
-        controller2 = new Controller(iv, tb, tv1, tv2, tv3, tv4, tv5, getApplicationContext());
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(Controller.no);
+
+        controller2 = new Controller(iv, tv1, tv2, tv3, tv4, tv5, getApplicationContext(), message);
     }
 }

@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Controller {
+    public static final String no = "no";
 
     private ImageView planets;
-    private TabLayout tabs;
     private TextView massText;
     private TextView diameterText;
     private TextView densityText;
@@ -46,88 +46,76 @@ public class Controller {
         mercury1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 1;
+                Switchto("m1");
             }
         });
 
         venus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 2;
+                Switchto("v");
             }
         });
 
         earth1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 3;
+                Switchto("e");
             }
         });
 
         mars1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 4;
+                Switchto("m2");
             }
         });
 
         jupiter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 5;
+                Switchto("j");
             }
         });
 
         saturn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 6;
+                Switchto("s");
             }
         });
 
         uranus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 7;
+                Switchto("u");
             }
         });
 
         neptune1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Switchto();
                 a = 8;
+                Switchto("n");
             }
         });
     }
 
-    Controller(ImageView PlanetPics, TabLayout Tabs, TextView TV1, TextView TV2,
-               TextView TV3, TextView TV4, TextView TV5, final Context c) {
+    Controller(ImageView PlanetPics, TextView TV1, TextView TV2,
+               TextView TV3, TextView TV4, TextView TV5, final Context c, String msg) {
         planets = PlanetPics;
-        tabs = Tabs;
         massText = TV1;
         diameterText = TV2;
         densityText = TV3;
         gravityText = TV4;
         titleText = TV5;
-
-        tabs.addTab(tabs.newTab().setText("1"));
-        tabs.addTab(tabs.newTab().setText("2"));
-        tabs.addTab(tabs.newTab().setText("3"));
-        tabs.addTab(tabs.newTab().setText("4"));
-        tabs.addTab(tabs.newTab().setText("5"));
-        tabs.addTab(tabs.newTab().setText("6"));
-        tabs.addTab(tabs.newTab().setText("7"));
-        tabs.addTab(tabs.newTab().setText("8"));
-
-        planets.setImageResource(R.drawable.mercury);
 
         planetsData = new Planets(c);
         updateText();
@@ -189,53 +177,79 @@ public class Controller {
 
             }
         });*/
+
+        if (msg.equals("m1")) {
+            planets.setImageResource(R.drawable.mercury);
+            setMercury1();
+            updateText();
+        }
+        if (msg.equals("v")) {
+            planets.setImageResource(R.drawable.venus);
+            setVenus1();
+            updateText();
+        }
+        if (msg.equals("e")) {
+            planets.setImageResource(R.drawable.earth);
+            setEarth1();
+            updateText();
+        }
+        if (msg.equals("m2")) {
+            planets.setImageResource(R.drawable.mars);
+            setMars1();
+            updateText();
+        }
+        if (msg.equals("j")) {
+            planets.setImageResource(R.drawable.jupiter);
+            setJupiter1();
+            updateText();
+        }
+        if (msg.equals("s")) {
+            planets.setImageResource(R.drawable.saturn);
+            setSaturn1();
+            updateText();
+        }
+        if (msg.equals("u")) {
+            planets.setImageResource(R.drawable.uranus);
+            setUranus1();
+            updateText();
+        }
+        if (msg.equals("n")) {
+            planets.setImageResource(R.drawable.neptune);
+            setNeptune1();
+            updateText();
+        }
     }
 
-    private void Switchto() {
+    private void Switchto(String planet) {
         Intent intent = new Intent(activity, MainActivity.class);
+        intent.putExtra(no, planet);
         activity.startActivity(intent);
     }
 
     private void updateStuff() {
         if (a == 1) {
-            planets.setImageResource(R.drawable.mercury);
-            setMercury1();
-            updateText();
+
         }
         if (a == 2){
-            planets.setImageResource(R.drawable.venus);
-            setVenus1();
-            updateText();
+
         }
         if (a == 3){
-            planets.setImageResource(R.drawable.earth);
-            setEarth1();
-            updateText();
+
         }
         if (a == 4) {
-            planets.setImageResource(R.drawable.mars);
-            setMars1();
-            updateText();
+
         }
         if (a == 5) {
-            planets.setImageResource(R.drawable.jupiter);
-            setJupiter1();
-            updateText();
+
         }
         if (a == 6) {
-            planets.setImageResource(R.drawable.saturn);
-            setSaturn1();
-            updateText();
+
         }
         if (a == 7) {
-            planets.setImageResource(R.drawable.uranus);
-            setUranus1();
-            updateText();
+
         }
         if (a == 8) {
-            planets.setImageResource(R.drawable.neptune);
-            setNeptune1();
-            updateText();
+
         }
     }
 
